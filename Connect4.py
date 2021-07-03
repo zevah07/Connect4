@@ -29,29 +29,29 @@ def dibujarTablero(tablero):
 			print(row)
 
 def tiroValido(secuencia):
-    	for column in secuencia:
-		if column < 1 & column > 7:
+    	for col in secuencia:
+		if col<1 & col >7:
 			return False
 	return True
-    def contenidoColumna(nro_column, tablero):
-    	columns = []
+    def contenidoColumna(nrocol, tablero):
+    	col = []
 	for row in tablero:
-		cell = row[nro_column - 1]
-		columns.append(cell)#append sirve para agregar un elemento a una lista
-	return columns
+		cell = row[nrocol - 1]
+		col.append(cell)
+	return col
 
 def contenidoFilas(nro_row, tablero):
 	rows = []
-	for column in tablero:
-		cell = column[nro_row - 1]
+	for col in tablero:
+		cell = col[nro_row - 1]
 		rows.append(cell)
 	return rows
 
 def ContenidoTodasLasColumnas(tablero):
-	columns = []
-	for nro_column in range(0, 7):
-		columns.insert(7,contenidoColumna(nro_column,tablero))
-	return columns
+	col = []
+	for nrocol in range(0, 7):
+		col.insert(7,contenidoColumna(nrocol,tablero))
+	return col
 
 secuencia = [1, 2, 3, 1]
 tablero = tablerovacio()
