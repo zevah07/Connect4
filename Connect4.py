@@ -28,5 +28,14 @@ def dibujarTablero(tablero):
 		for row in tablero:
 			print(row)
 
+def tiroValido(secuencia):
+    	for col in secuencia:
+		if col < 1 & column > 7:
+			return False
+	return True
 secuencia = [1, 2, 3, 1]
+if tiroValido(secuencia):
 dibujarTablero(completarTableroEnOrden(secuencia,tablerovacio()))
+print("La secuencia es valida")
+else:
+    print("Para que la secuencia sea valida los valores tienen que estar comprendidos entre el 1 y el 7")
