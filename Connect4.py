@@ -7,8 +7,7 @@ def tablerovacio():
         ['|', 0, 0, 0, 0, 0, 0, 0, '|'],
         ['|', 0, 0, 0, 0, 0, 0, 0, '|'],
         ['+','-','-','-','-','-','-','-','+']
-    ]
-  
+
 def soltarFichaEnColumna(ficha, column, tablero):
     		for row in range(6, 0, -1):
 				if tablero[row - 1][column] == 0:
@@ -77,7 +76,10 @@ def contenidoTodasLasColumnas(tablero):
 
 *****************************************************************************
 
-secuencia = [1, 2, 3, 7, 1, 7,]
+secuencia_texto = input("Ingrese la secuencia de fichas: ")
+secuencia = []
+for items in secuencia_texto.split(','):
+    	secuencia.append(int(items))
 tablero = tablerovacio()
 if tiroValido(secuencia):
 	tablero = completarTableroEnOrden(secuencia, tablero)
