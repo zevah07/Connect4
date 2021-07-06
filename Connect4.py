@@ -10,10 +10,10 @@ def tablerovacio():
 
 def soltarFichaEnColumna(ficha, column, tablero):
     		for row in range(6, 0, -1):
-                if tablero[row - 1][column - 1] == 0:
+				if tablero[row - 1][column - 1] == 0:
 						tablero[row -1][column -1] = ficha
 						return
-                                                                          
+*******************************************************************
 def completarTableroEnOrden(secuencia, tablero):
 	c = 0
 	for column in secuencia:
@@ -59,7 +59,7 @@ def contenidoTodasLasColumnas(tablero):
 	for nro_column in range(0, 7):
 		columns.insert(7,contenidoColumna(nro_column,tablero))
 	return columns
-                                                                          
+*******************************************************************
 secuencia = [1, 2, 3, 1]
 tablero = tablerovacio()
 if tiroValido(secuencia):
@@ -69,8 +69,8 @@ if tiroValido(secuencia):
 else:
 	print("Para que la secuencia sea valida los valores tienen que estar comprendidos entre el 1 y el 7")
 
-print("                                                                          ")
+print("*******************************************************************")
 print(contenidoColumna(1, tablero))
-print("                                                                          ")
+print("*******************************************************************")
 print(contenidoFilas(1, tablero))
-print("                                                                          ")
+print("*******************************************************************")
