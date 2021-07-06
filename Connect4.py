@@ -77,7 +77,10 @@ def contenidoTodasLasColumnas(tablero):
 
 *****************************************************************************
 
-secuencia = [1, 2, 3, 7, 1, 7,]
+secuencia_texto = input("Ingrese la secuencia de fichas: ")
+secuencia = []
+for items in secuencia_texto.split(','):
+    	secuencia.append(int(items))
 tablero = tablerovacio()
 if tiroValido(secuencia):
 	tablero = completarTableroEnOrden(secuencia, tablero)
