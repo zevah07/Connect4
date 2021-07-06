@@ -7,7 +7,6 @@ def tablerovacio():
         ['|', 0, 0, 0, 0, 0, 0, 0, '|'],
         ['|', 0, 0, 0, 0, 0, 0, 0, '|'],
         ['+','-','-','-','-','-','-','-','+']
-    ] 
 
 def soltarFichaEnColumna(ficha, column, tablero):
     		for row in range(6, 0, -1):
